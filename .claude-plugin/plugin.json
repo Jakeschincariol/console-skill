@@ -1,0 +1,23 @@
+{
+  "name": "console-skill",
+  "description": "11 Claude skills that port PlayStation 2 games you own to PC: reverse engineer the code, rebuild the graphics and backend, any controller, play it anywhere, then mod it however you want.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jake Schincariol",
+    "url": "https://opusjake.ai"
+  },
+  "homepage": "https://github.com/Jakeschincariol/console-skill",
+  "repository": "https://github.com/Jakeschincariol/console-skill",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "ps2",
+    "static-recompilation",
+    "reverse-engineering",
+    "game-dev",
+    "modding",
+    "gamepad"
+  ],
+  "skills": "./"
+}

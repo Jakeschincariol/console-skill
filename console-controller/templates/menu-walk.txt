@@ -1,0 +1,17 @@
+# Example input replay script for padmap.py gen --replay (PS2X_INPUT_SCRIPT).
+# One line per change: frame buttons [lx ly rx ry]
+#   frame    = how many times the game has read pad port 0 so far (about one per video frame)
+#   buttons  = names joined with +, or - for none, or 0xMASK of PRESSED DS2 bits
+#   sticks   = 0..255 report bytes, 128 = centre (optional, centred when left out)
+# A state holds until the next line. Write your own for your game: these frames are made up.
+0     -
+600   START          # title screen: press Start after about 10 seconds
+606   -
+900   CROSS          # confirm the first menu item
+906   -
+1200  DOWN
+1206  -
+1260  CROSS
+1266  -
+1500  - 128 0 128 128   # hold the left stick up for a second
+1560  -

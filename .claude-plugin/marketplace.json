@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "console-skill",
+  "description": "The Console skill pack for Claude: port PlayStation 2 games you own to PC, then mod them",
+  "owner": {
+    "name": "Jake Schincariol",
+    "url": "https://opusjake.ai"
+  },
+  "plugins": [
+    {
+      "name": "console-skill",
+      "description": "Eleven Claude skills for porting PlayStation 2 games you own to native PC with PS2Recomp: a reverse engineer, a backend engineer, a graphics artist, a controller mapper, a mod maker, a level designer, a sound designer, a physics tuner, a save manager, a play-anywhere packager and a playtester.",
+      "source": "./",
+      "category": "development",
+      "homepage": "https://github.com/Jakeschincariol/console-skill"
+    }
+  ]
+}
