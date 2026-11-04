@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17251e" />
+    <title>Vale do Orvalho — Fazenda 3D</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main id="game">
+      <div id="scene" aria-label="Mundo 3D do Vale do Orvalho"></div>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Vale do Orvalho, início">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>
+            <strong>Vale do Orvalho</strong>
+            <small>uma nova estação começa</small>
+          </span>
+        </a>
+        <div class="day-card">
+          <span class="sun-icon" aria-hidden="true">☀</span>
+          <span><strong>Primavera 1</strong><small>Quarta-feira</small></span>
+          <i></i>
+          <span class="clock"><strong id="clock">06:00</strong><small>Manhã</small></span>
+        </div>
+        <div class="wallet" aria-label="Moedas">
+          <span aria-hidden="true">◉</span><strong id="coins">120</strong>
+        </div>
+      </header>
+
+      <aside class="quest-card">
+        <div class="quest-heading"><span>SEU PRIMEIRO DIA</span><span class="sparkle">✧</span></div>
+        <p>Um cantinho só seu</p>
+        <div class="quest-progress"><span id="quest-progress"></span></div>
+        <small id="quest-copy">Prepare a terra e plante sua primeira semente.</small>
+      </aside>
+
+      <div class="location-tag"><span></span> SÍTIO BRISA MANSINHA</div>
+
+      <div class="player-card" id="player-card">
+        <span class="avatar">✿</span>
+        <span><strong>Lia</strong><small>Nova fazendeira</small></span>
+      </div>
+
+      <div class="bottom-hud">
+        <div class="energy-card">
+          <div class="energy-label"><span>ENERGIA</span><strong id="energy-value">100 / 100</strong></div>
+          <div class="energy-track"><span id="energy-bar"></span></div>
+          <div class="tool-row">
+            <button class="tool" type="button" data-tool="hoe" aria-label="Enxada"><span>⚒</span><small>1</small></button>
+            <button class="tool" type="button" data-tool="watering" aria-label="Regador"><span>♧</span><small>2</small></button>
+            <button class="tool active" type="button" data-tool="seeds" aria-label="Sementes"><span>✿</span><small>3</small></button>
+          </div>
+        </div>
+        <div class="interaction">
+          <span class="keycap">E</span>
+          <span id="action-hint">Aproxime-se de um canteiro</span>
+        </div>
+        <div class="controls">
+          <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Mover</span>
+          <span><kbd>E</kbd> Interagir</span>
+        </div>
+      </div>
+
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <button id="touch-action" class="touch-action" type="button">Interagir <kbd>E</kbd></button>
+    </main>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
